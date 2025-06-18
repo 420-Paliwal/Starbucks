@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .black {
+            color: black;
+        }
+
+        .box1-innerbox2-h1 {
+            font-size: 50px;
+        }
+
+        .innerbox2 {
+            color: white;
+            background-color: #1e3932;
+        }
+
+        .heading {
+            font-size: 60px;
+        }
+
+        .para {
+            font-size: 25px;
+            font-family: inherit;
+        }
+
+        .box6-innerbox1-heading {
+            padding: 0 0 20px 0;
+        }
+
+        .box6-innerbox1-link {
+            padding: 10px 0;
+        }
+
+        .box6-innerbox1 {
+            padding: 20px;
+        }
+
+        .footer-icon {
+            padding: 13px;
+            font-size: 25px;
+            color: white;
+            background-color: black;
+            margin: 0 5px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar img {
+            height: 50px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link a {
+            padding: 10px 15px;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header-mainbox-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .location a {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .signup-button {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .heading {
+                font-size: 40px;
+            }
+
+            .para {
+                font-size: 20px;
+            }
+
+            .box1-innerbox2-h1 {
+                font-size: 35px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu,
+            .header-mainbox-right {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #fff;
+                border-top: 1px solid #ccc;
+            }
+
+            .nav-menu.active,
+            .header-mainbox-right.active {
+                display: flex;
+            }
+
+            .nav-link {
+                border-bottom: 1px solid #eee;
+                width: 100%;
+            }
+
+            .nav-link a {
+                padding: 15px;
+            }
+
+            .signup-button {
+                width: 100%;
+                flex-direction: row;
+                padding: 15px;
+                gap: 10px;
+            }
+
+            .signup-button > div {
+                flex: 1;
+            }
+
+            .location a {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .heading {
+                font-size: 30px;
+            }
+
+            .para {
+                font-size: 18px;
+            }
+
+            .box1-innerbox2-h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .heading {
+                font-size: 24px;
+            }
+
+            .para {
+                font-size: 16px;
+            }
+
+            .box1-innerbox2-h1 {
+                font-size: 22px;
+            }
+
+            .box6-innerbox1 {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="d-flex align-items-center">
+            <img src="starbucks.png" alt="Starbucks Logo">
+            <h4 class="ml-3 mt-2">Starbucks®</h4>
+        </div>
+        <div class="hamburger"><i class="fas fa-bars black"></i></div>
+        <ul class="nav-menu">
+            <li class="nav-link"><a href="#" class="black">Menu</a></li>
+            <li class="nav-link"><a href="#" class="black">Rewards</a></li>
+            <li class="nav-link"><a href="#" class="black">Gift Cards</a></li>
+        </ul>
+        <div class="header-mainbox-right">
+            <div class="location nav-link"><a href="#" class="black"><i class="fa-solid fa-location-dot mr-2"></i> Find location</a></div>
+            <div class="signup-button ">
+                <div class="m-2"><button class="btn border-dark rounded-pill w-100 font-weight-bold black">Sign In</button></div>
+                <div><button class="btn btn-dark rounded-pill w-100 font-weight-bold">Join now</button></div>
+            </div>
+        </div>
+    </nav>
+
+    <hr class="border-secondary" style="color: grey">
+    <section class="box1">
+        <div class="container-fluid ">
+            <div class="mainbox d-flex flex-column flex-md-row p-0">
+                <div class="innerbox1 col-md-6 col-sm-12 p-0 wow animate__animated animate__backInLeft order-md-1 order-2">
+                    <img src="starbucks-box1-img.jpg" alt="Starbucks Rewards" class="img-fluid w-100 h-100">
+                </div>
+                <div class="innerbox2 col-md-6 col-sm-12 d-flex align-items-center wow animate__animated animate__backInRight order-md-2 order-1">
+                    <div class="text-center font-weight-bold p-3 p-md-5">
+                        <h1 class="box1-innerbox2-h1 pb-0 p-md-5 p-3 heading">Make your Rewards merrier</h1>
+                        <p class="p-md-3 p-2 para">Starbucks® Rewards + Delta SkyMiles® have come
+                            together! Link your accounts to get 1 mile per $1* spent at Starbucks.</p>
+                        <button class="btn btn-group innerbox2 border rounded-pill">Link now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="box2">
+        <div class="container-fluid ">
+            <div class="mainbox d-flex flex-column flex-md-row p-0">
+                <div class="box2-innerbox2 col-md-6 col-sm-12 d-flex align-items-center wow animate__animated animate__backInLeft order-md-1 order-2"
+                    style="background-color: red; color: white;">
+                    <div class="text-center font-weight-bold p-3 p-md-5">
+                        <h1 class="box1-innerbox2-h1 pb-0 p-md-5 p-3 heading">Caramel celebration</h1>
+                        <p class="p-md-3 p-2 para">Our Caramel Brulée Frappuccino® blended beverage is made for holiday
+                            happiness.</p>
+                        <button class="btn btn-group border rounded-pill" style="color: white;">Order now</button>
+                    </div>
+                </div>
+                <div class="innerbox1 col-md-6 col-sm-12 p-0 wow animate__animated animate__backInRight order-md-2 order-1">
+                    <img src="137-82008.jpg" alt="Caramel Brulée Frappuccino" class="img-fluid w-100 h-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="box3">
+        <div class="container-fluid ">
+            <div class="mainbox d-flex flex-column flex-md-row p-0">
+                <div class="innerbox1 col-md-6 col-sm-12 p-0 wow animate__animated animate__backInLeft order-md-1 order-2">
+                    <img src="image3.jpg" alt="Sugar Plum Cheese Danish" class="img-fluid h-100 w-100">
+                </div>
+                <div class="box3-innerbox2 col-md-6 col-sm-12 d-flex align-items-center wow animate__animated animate__backInRight order-md-2 order-1"
+                    style="background-color: #1e3932; color: white;">
+                    <div class="text-center font-weight-bold p-3 p-md-5">
+                        <h1 class="box1-innerbox2-h1 pb-0 p-md-5 p-3 heading">Sugar-plum joy</h1>
+                        <p class="p-md-3 p-2 para">Here again, the Sugar Plum Cheese Danish delights with a cream-cheese
+                            filling and spiced sugar-plum spread.</p>
+                        <button class="btn btn-group border rounded-pill" style="color: white;">Order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="box4">
+        <div class="container-fluid ">
+            <div class="mainbox d-flex flex-column flex-md-row p-0">
+                <div class="box2-innerbox2 col-md-6 col-sm-12 d-flex align-items-center wow animate__animated animate__backInLeft order-md-1 order-2"
+                    style="background-color: #006241; color: white;">
+                    <div class="text-center font-weight-bold p-3 p-md-5">
+                        <h1 class="box1-innerbox2-h1 pb-0 p-md-5 p-3 heading">Toasty all the way</h1>
+                        <p class="p-md-3 p-2 para">The Double-Smoked Bacon, Cheddar & Egg Sandwich is a delicious protein-rich
+                            choice.</p>
+                        <button class="btn btn-group border rounded-pill" style="color: white;">Order now</button>
+                    </div>
+                </div>
+                <div class="innerbox1 col-md-6 col-sm-12 p-0 wow animate__animated animate__backInRight order-md-2 order-1"
+                    style="background-color: #006241;">
+                    <img src="4image.png" alt="Double-Smoked Bacon Sandwich" class="img-fluid w-100 h-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="box5">
+        <div class="container-fluid">
+            <div class="mainbox text-center justify-content-center wow animate__animated animate__backInRight">
+                <p class="py-5 px-3 px-lg-5">
+                    *Excludes taxes and gratuities. At participating stores. Some restrictions apply. 150 Stars
+                    deposited after first qualifying Starbucks purchase. Flights purchased close to departure may not
+                    earn double Stars. Stars may not be earned on purchases of alcohol, Starbucks Cards and Starbucks
+                    Card reloads. For details,
+                    <a href="#" class="font-weight-bold black">visit deltastarbucks.com/terms.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <hr class="border-secondary" style="color: grey">
+    <section class="box6">
+        <div class="container-fluid">
+            <div class="mainbox row">
+                <div class="box6-innerbox1 col-sm-12 col-md-6 col-lg-2">
+                    <h3 class="box6-innerbox1-heading"><a href="#" class="black">About Us</a></h3>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Our Company</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Our Coffee</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Story and News</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Starbucks® Archive</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Investres realtion</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Coustmer Services</a>
+                </div>
+                <div class="box6-innerbox1 col-sm-12 col-md-6 col-lg-2">
+                    <h3 class="box6-innerbox1-heading"><a href="#" class="black">Careers</a></h3>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Cultures and Values</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Inclusion,Diversity,and Equity</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">College Achivement Plan</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Almuni Community</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">U. S. Careers</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">International Careers</a>
+                </div>
+                <div class="box6-innerbox1 col-sm-12 col-md-6 col-lg-2">
+                    <h3 class="box6-innerbox1-heading"><a href="#" class="black">Social Impact</a></h3>
+                    <a href="#" class="box6-innerbox1-link nav-link black">People</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Planet</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Enviroment and Activities</a>
+                </div>
+                <div class="box6-innerbox1 col-sm-12 col-lg-2 col-md-6">
+                    <h3 class="box6-innerbox1-heading"><a href="#" class="black">For Business Partners</a></h3>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Landlord Support Center</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Suppliers</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Corporate Gift Card Sales</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Office and Foodservices Coffes</a>
+                </div>
+                <div class="box6-innerbox1 col-sm-12 col-lg-2 col-md-6">
+                    <h3 class="box6-innerbox1-heading"><a href="#" class="black">Orders and Pickup</a></h3>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Order on The App</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Order on The Web</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Delivery</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Orders and Pickup Options</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">Explore and Find Coffee for Home</a>
+                    <a href="#" class="box6-innerbox1-link nav-link black">International Careers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="border-secondary" style="color: grey">
+    <footer class="box7">
+        <div class="container-fluid">
+            <div class="box7-innerbox1 py-4 text-center">
+                <a href="#" class="black"><i class="fa-brands fa-spotify footer-icon rounded-circle"></i></a>
+                <a href="#" class="black"><i class="fa-brands fa-youtube footer-icon rounded-circle"></i></a>
+                <a href="#" class="black"><i class="fa-brands fa-facebook footer-icon rounded-circle"></i></a>
+                <a href="#" class="black"><i class="fa-brands fa-twitter footer-icon rounded-circle"></i></a>
+                <a href="#" class="black"><i class="fa-brands fa-instagram footer-icon rounded-circle"></i></a>
+            </div>
+            <div class="box7-innerbox1">
+                <ul class="row justify-content-center flex-wrap">
+                    <li class="nav-link border-right border-dark px-2"><a href="#" class="black font-weight-bold">Privacy Policy</a></li>
+                    <li class="nav-link border-right border-dark px-2"><a href="#" class="black font-weight-bold">Terms Of Use</a></li>
+                    <li class="nav-link border-right border-dark px-2"><a href="#" class="black font-weight-bold">CA Supply Chain Act</a></li>
+                    <li class="nav-link px-2"><a href="#" class="black font-weight-bold">Cookie Prefrences</a></li>
+                </ul>
+            </div>
+            <div class="box7-innerbox1 text-center">
+                <p class="py-3">© 2022 Starbucks Coffee Company. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Your remaining content continues here -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const headerRight = document.querySelector(".header-mainbox-right");
+
+            hamburger.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+                headerRight.classList.toggle("active");
+                const icon = this.querySelector("i");
+                icon.classList.toggle("fa-bars");
+                icon.classList.toggle("fa-times");
+            });
+
+            document.querySelectorAll(".nav-link a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("active");
+                    headerRight.classList.remove("active");
+                    hamburger.querySelector("i").classList.remove("fa-times");
+                    hamburger.querySelector("i").classList.add("fa-bars");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
